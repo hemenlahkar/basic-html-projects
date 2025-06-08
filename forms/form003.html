@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        .survey {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .option-group {
+            margin: 8px 0;
+        }
+
+        .submit-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="survey">
+        <fieldset>
+            <legend>How do you rate our service?</legend>
+            <div class="option-group">
+                <input type="radio" name="rating" id="excellent">
+                <label for="excellent">Excellent</label>
+            </div>
+            <div class="option-group">
+                <input type="radio" name="rating" id="good">
+                <label for="good">Good</label>
+            </div>
+            <div class="option-group">
+                <input type="radio" name="rating" id="average">
+                <label for="average">Average</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Suggestion:</legend>
+            <textarea id="suggestion" rows="4" style="width: 100%;"></textarea>
+        </fieldset>
+
+        <div class="submit-container">
+            <button type="submit" style="padding: 10px 20px; background: #FF9800">Submit Feedback</button>
+        </div>
+    </form>
+</body>
+
+</html>
