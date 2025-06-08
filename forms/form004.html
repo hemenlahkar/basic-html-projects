@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form</title>
+    <style>
+        .booking-form {
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px dashed #3498db;
+            border-radius: 10px;
+        }
+
+        .input-group {
+            margin: 15px 0;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .book-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="booking-form">
+        <h2 style="text-align: center;">Hotel Booking</h2>
+        <div class="input-group">
+            <label for="checkIn">Check-In Date</label>
+            <input type="date" style="width: 100%; padding: 8px;" id="checkIn" required>
+        </div>
+        <div class="input-group">
+            <label for="checkOut">Check-Out Date</label>
+            <input type="date" style="width: 100%; padding: 8px;" id="checkOut" required>
+        </div>
+        <div class="input-group">
+            <label for="noOfGuest">Guests</label>
+            <select id="noOfGuest">
+                <option>1 Guest</option>
+                <option>2 Guest</option>
+                <option>3+ Guest</option>
+            </select>
+        </div>
+        <button class="book-btn">Book Now</button>
+    </form>
+</body>
+
+</html>
