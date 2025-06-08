@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .register-form {
+            width: 300px;
+            margin: 20px auto;
+            padding: 25px;
+            background: #efb1b1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-control {
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background: #2196F3;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="register-form">
+        <h2 class="form-header">Create Account</h2>
+        <input type="text" class="form-control" placeholder="Full Name" required>
+        <input type="email" class="form-control" placeholder="Email" required>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" required>
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+</body>
+
+</html>
