@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .video-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>YouTube Video Gallery</h1>
+        <p>Educational content about web development</p>
+    </div>
+
+    <div class="gallery">
+        <!-- Video 1 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" title="HTML Crash Course"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>HTML Crash Course For Absolute Beginners</h3>
+                <p>Learn HTML in 1 hour</p>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/yfoY53QXEnI" title="CSS Crash Course"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>CSS Crash Course For Absolute Beginners</h3>
+                <p>Learn CSS in 1 hour</p>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" title="JavaScript Crash Course"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>JavaScript Crash Course For Beginners</h3>
+                <p>Learn JavaScript in 1 hour</p>
+            </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/0YFrGy_mzjY" title="Responsive Design"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>Learn Responsive Web Design</h3>
+                <p>Build responsive websites</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
