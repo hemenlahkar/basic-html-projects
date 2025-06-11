@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery with Chapters</title>
+    <style>
+        .gallery {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-video {
+            width: 100%;
+            background: black;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .chapter {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .chapter img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .chapter-title {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="main-video">
+            <video controls poster="./assests/poster001.jpg">
+                <source src="./assests/video001.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="chapters">
+            <div class="chapter" onclick="document.querySelector('video').currentTime=0">
+                <img src="./assests/poster001.jpg" alt="Intro">
+                <p class="chapter-title">Introduction (0:00)</p>
+            </div>
+            <div class="chapter" onclick="document.querySelector('video').currentTime=136">
+                <img src="./assests/poster001.jpg" alt="Tutorial">
+                <p class="chapter-title">The Lazy rock ant (2:16)</p>
+            </div>
+            <div class="chapter" onclick="document.querySelector('video').currentTime=164">
+                <img src="./assests/poster001.jpg" alt="Conclusion">
+                <p class="chapter-title">Boredom (2:44)</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
